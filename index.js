@@ -32,14 +32,15 @@ inquirer
       message: 'Enter the proper credit for your project:',
     },
     {
-      type: 'input',
+      type: 'list',
       name: 'license',
       message: 'Choose a license for your project:',
+      choices: ["Apache License 2.0", "The MIT License", "BSD 2-Clause", "BSD 3-Clause", "Boost Software License 1.0", "Creative Commons Zero v1.0 Universal",],
     },
     {
       type: 'input',
       name: 'features',
-      message: 'Enter contribution guidelines for your project:',
+      message: 'Enter the features that your project has:',
     },
     {
       type: 'input',
@@ -101,7 +102,7 @@ You can also reach me at ${answers.email}
     `;
 
 
-    fs.writeFile('README.md', readmeContent, (err) => {
+    fs.writeFile('./readme/README.md', readmeContent, (err) => {
         if (err) {
           console.error('Error writing README.md:', err);
         } else {
