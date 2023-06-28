@@ -77,3 +77,16 @@ ${answers.issues}
 ## Contributing
 ${answers.contributions}
     `;
+
+
+    fs.writeFile('README.md', readmeContent, (err) => {
+        if (err) {
+          console.error('Error writing README.md:', err);
+        } else {
+          console.log('README.md generated successfully!');
+        }
+      });
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });

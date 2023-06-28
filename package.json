@@ -1,23 +1,15 @@
 {
-  "name": "readmegenerator",
+  "name": "test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/keurid/ReadmeGenerator.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/keurid/ReadmeGenerator/issues"
-  },
-  "homepage": "https://github.com/keurid/ReadmeGenerator#readme",
   "dependencies": {
-    "inquirer": "^9.2.7"
+    "inquirer": "^8.2.4"
   }
 }
