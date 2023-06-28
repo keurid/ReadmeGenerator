@@ -27,10 +27,19 @@ inquirer
       message: 'Enter usage instructions for your project:',
     },
     {
-      type: 'list', // Here is what i'm referencing when there's more types of "type" which we will see when we run this code.
+      type: 'input',
+      name: 'credits',
+      message: 'Enter the proper credit for your project:',
+    },
+    {
+      type: 'input',
       name: 'license',
       message: 'Choose a license for your project:',
-      choices: ['MIT', 'Apache 2.0', 'GNU GPLv3', 'ISC', 'None'], // We need "choices" because it allows the user to look at them all at once.
+    },
+    {
+      type: 'input',
+      name: 'features',
+      message: 'Enter contribution guidelines for your project:',
     },
     {
       type: 'input',
@@ -57,13 +66,13 @@ inquirer
     const readmeContent = `
 # ${answers.title}
 
-${answers.description}
+## ${answers.description}
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Reporting Issues](#reporting-issues)
-- [Contributing](#contributing)
+- [Credits](#credits)
+- [License](#license)
 
 ## Installation
 ${answers.installation}
@@ -71,11 +80,24 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
-## Reporting Issues
-${answers.issues}
+## Credits
+${answers.credits}
 
-## Contributing
-${answers.contributions}
+## License
+${answers.license}
+
+## Features
+${answers.features}
+
+## How to Contribute
+${answers.contributing}
+
+## Tests
+${answers.tests}
+
+## Questions
+For any questions reach out to me on https://github.com/${answers.githubUsername}
+You can also reach me at ${answers.email}
     `;
 
 
